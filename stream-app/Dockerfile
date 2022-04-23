@@ -12,6 +12,7 @@ RUN apk update \
     --test-framework junit-jupiter \
     --project-name device-metric-stream \
     --package com.example.summarizer \
+  && chmod +x ./gradlew \
   && ./gradlew build
 
 COPY ./resource/entrypoint.sh /entrypoint.sh

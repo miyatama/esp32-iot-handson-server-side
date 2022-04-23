@@ -6,6 +6,7 @@ RUN apk update \
     bash \
     vim \
   && cd /project \
+  && chmod +x ./gradlew \
   && ./gradlew build
 
 COPY ./resource/entrypoint.sh /entrypoint.sh
